@@ -15,48 +15,82 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/15ac3c2808.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <link rel="icon" href="img/logo-sun2.png" type="image/png" />
   </head>
   <body>
-    <!-- headerbar -->
-    <header id="header">
-      <span id="header__logoBar">
-        <img src="./img/logo-sun2.png" alt="" />
-        형진
-      </span>
-      <ul class="header__menu">
-        <li class="header__menu__item">Home</li>
-        <li class="header__menu__item">About</li>
-        <li class="header__menu__item">Skills</li>
-        <li class="header__menu__item">My work</li>
-        <li class="header__menu__item">Testimonial</li>
-        <li class="header__menu__item">Contact</li>
-      </ul>
-    </header>
-    <!-- profile -->
-    <section class="profile">
-      <div class="profile__avatar">
-        <img src="./img/avartar2.jpg" alt="avartar" />
-      </div>
-      <span>
-        안녕하세요<br />
-        김형진의 포트폴리오 사이트에 오신걸 환영합니다
-      </span>
-    </section>
+    <div id="background--sunrise">
+      <!-- headerbar -->
+      <nav class="header">
+        <span class="header__logoBar">
+          <img src="./img/logo-sun2.png" alt="" />
+          형진
+        </span>
+        <ul class="header__menu">
+          <li class="header__menu__item">Home</li>
+          <li class="header__menu__item">About</li>
+          <li class="header__menu__item">Skills</li>
+          <li class="header__menu__item">My work</li>
+          <li class="header__menu__item">Testimonial</li>
+          <li class="header__menu__item">Contact</li>
+        </ul>
+      </nav>
+      <!-- profile -->
+      <section class="profile">
+        <div class="profile__avatar">
+          <img src="./img/avartar2.jpg" alt="avartar" />
+        </div>
+        <span class="profile__title">
+          안녕하세요<br />
+          김형진의 포트폴리오 사이트에 오신걸 환영합니다
+        </span>
+        <button class="profile__contact">contact me</button>
+      </section>
+    </div>
     <!-- about -->
-    <section id="about"></section>
+    <section class="about">
+      <h1 class="about__title">About me</h1>
+      <span class="about__description">
+        프론트엔드 개발자를 목표로 공부하고 있는 초보 개발자.<br />
+        전문적인 프론트엔드 개발자가 되는 것이 첫 번째 목표입니다.
+      </span>
+      <ul class="about__stacks">
+        <li class="about__stacks--item">
+          <div>
+            <i class="fa-brands fa-html5 fa-5x"></i>
+          </div>
+          <h2 class="about__stacks--title">Front-end</h2>
+          <span class="about__stacks--description"
+            >HTML, CSS, JavaScript, React</span
+          >
+        </li>
+        <li class="about__stacks--item">
+          <div>
+            <i class="fa-solid fa-mobile fa-5x"></i>
+          </div>
+          <h2 class="about__stacks--title">Mobile</h2>
+          <span class="about__stacks--description">-</span>
+        </li>
+        <li class="about__stacks--item">
+          <div>
+            <i class="fa-solid fa-server fa-5x"></i>
+          </div>
+          <h2 class="about__stacks--title">Backend</h2>
+          <span class="about__stacks--description">NodeJs, JavaScript</span>
+        </li>
+      </ul>
+    </section>
     <!-- skiils -->
-    <section id="skills"></section>
+    <section class="skills"></section>
     <!-- works -->
-    <section id="myWorks"></section>
+    <section class="myWorks"></section>
     <!-- testimonials -->
-    <section id="Testimonials"></section>
+    <section class="Testimonials"></section>
     <!-- contact -->
-    <section id="contact"></section>
+    <section class="contact"></section>
     <main></main>
   </body>
 </html>

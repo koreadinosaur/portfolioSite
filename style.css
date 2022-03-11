@@ -34,15 +34,16 @@
   --animation-duration: 300ms;
 
   /* margin */
-  --margin-top: 4%;
+  --margin-top: 40px;
   /* padding */
-  --padding-top: 5%;
+  --padding-top: 40px;
 
   --logo-size: 10%;
   --font-size: 20px;
   --color: white;
   --font-size-title: 40px;
 }
+
 /* Universal tags */
 * {
   box-sizing: border-box;
@@ -87,16 +88,16 @@ body {
   background-size: 100% 100%;
 }
 /* header */
-#header {
+.header {
   color: var(--color-white);
   display: flex;
   justify-content: space-between;
 }
-#header__logoBar {
+.header__logoBar {
   display: flex;
   align-items: center;
 }
-#header__logoBar img {
+.header__logoBar img {
   width: var(--logo-size);
   height: calc(var(--logo-size) * 5);
 }
@@ -116,7 +117,7 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding-top: calc(var(--padding-top) * 0.5);
+  padding-top: var(--padding-top);
 }
 .profile span {
   padding-top: calc(var(--padding-top) * 0.5);
@@ -127,14 +128,19 @@ body {
 }
 
 .profile__avatar img {
-  width: calc(var(--logo-size) * 2);
-  height: calc(var(--logo-size) * 2);
-  object-fit: cover;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
+}
+.profile__contact {
+  margin: var(--margin-top);
+  border: 1px solid var(--color-white);
+  background: none;
+  color: var(--color-white);
 }
 
 /* about */
-#about {
+.about {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -142,10 +148,30 @@ body {
   color: var(--color-black);
 }
 
-#about__title {
-  font-size: var(--font-size-title);
+.about__description {
+  margin-top: calc(var(--padding-top) * 0.5);
 }
-
-#about__description {
-  margin-top: calc(var(--padding-top) * 0.3);
+.about__stacks {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 60px 0 0 0;
+  padding-left: 0;
+}
+.about__stacks--item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__stacks--item div {
+  border: 1px solid var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.about__stacks i {
+  color: var(--color-blue);
 }
