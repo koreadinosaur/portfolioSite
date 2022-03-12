@@ -39,7 +39,7 @@
         </ul>
       </nav>
       <!-- profile -->
-      <section class="profile">
+      <section id="profile">
         <div class="profile__avatar">
           <img src="./img/avartar2.jpg" alt="avartar" />
         </div>
@@ -51,7 +51,7 @@
       </section>
     </div>
     <!-- about -->
-    <section class="about">
+    <section id="about">
       <h1 class="about__title">About me</h1>
       <span class="about__description">
         프론트엔드 개발자를 목표로 공부하고 있는 초보 개발자.<br />
@@ -84,13 +84,131 @@
       </ul>
     </section>
     <!-- skiils -->
-    <section class="skills"></section>
-    <!-- works -->
-    <section class="myWorks"></section>
+    <section id="skills">
+      <h1 class="skills__title">Skills</h1>
+      <h2 class="skills__subtitle">Skills & Attributes</h2>
+      <h3 class="skills__description">
+        해당 언어에 대한 관심, 숙련도를 자가진단 하였습니다.
+      </h3>
+      <div class="skillBox">
+        <div class="skillBox__left">
+          <h3 class="skillBox__left__title">Skills</h3>
+          <div class="skillBox__graph">
+            <div>
+              <label for="Html">Html</label>
+              <span>90%</span>
+            </div>
+            <input
+              type="range"
+              name="Html"
+              min="0"
+              max="10"
+              step="1"
+              value="9"
+            />
+            <div>
+              <label for="Css">Css</label>
+              <span>50%</span>
+            </div>
+            <input
+              type="range"
+              name="Css"
+              value="5"
+              min="0"
+              max="10"
+              step="1"
+            />
+            <div>
+              <label for="JavaScript">JavaScript</label>
+              <span>30%</span>
+            </div>
+            <input
+              type="range"
+              name="JavaScript"
+              value="3"
+              min="0"
+              max="10"
+              step="1"
+            />
+            <div>
+              <label for="React">React</label>
+              <span>0%</span>
+            </div>
+            <input
+              type="range"
+              name="React"
+              value="0"
+              min="0"
+              max="10"
+              step="1"
+            />
+            <div>
+              <label for="nodeJs">nodeJs</label>
+              <span>20%</span>
+            </div>
+            <input
+              type="range"
+              name="nodeJs"
+              value="2"
+              min="0"
+              max="10"
+              step="1"
+            />
+          </div>
+        </div>
+        <div class="skillBox__right">
+          <div class="skillBox__tools">
+            <span class="skillBox__tools__title"> Tools </span>
+            <span> Visual Studio </span>
+          </div>
+          <div class="skillBox__etc">
+            <span class="skillBox__etc__title"> Etc </span><span>Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- projects -->
+    <section id="myProjects">
+      <h1 class="projects__title">My Projects</h1>
+      <nav class="projects-nav">
+        <ul>
+          <li class="projects-nav__list">All</li>
+          <li class="projects-nav__list">Front-end</li>
+          <li class="projects-nav__list">Back-end</li>
+          <li class="projects-nav__list">Mobile</li>
+        </ul>
+      </nav>
+      <div class="projects__screenshots">
+        <div class="projects__screenshot">
+          <img src="./img/youtube-watch.png" alt="" />
+        </div>
+        <div class="projects__screenshot">
+          <img src="./img/youtube-watch.png" alt="" />
+        </div>
+        <div class="projects__screenshot">
+          <img src="./img/youtube-watch.png" alt="" />
+        </div>
+        <div class="projects__screenshot">
+          <img src="./img/youtube-watch.png" alt="" />
+        </div>
+        <div class="projects__screenshot">
+          <img src="./img/youtube-watch.png" alt="" />
+        </div>
+        <div class="projects__screenshot">
+          <img src="./img/youtube-watch.png" alt="" />
+        </div>
+        <div class="projects__screenshot">
+          <img src="./img/youtube-watch.png" alt="" />
+        </div>
+        <div class="projects__screenshot">
+          <img src="./img/youtube-watch.png" alt="" />
+        </div>
+      </div>
+    </section>
     <!-- testimonials -->
-    <section class="Testimonials"></section>
+    <section id="Testimonials"></section>
     <!-- contact -->
-    <section class="contact"></section>
+    <section id="contact"></section>
     <main></main>
   </body>
 </html>
