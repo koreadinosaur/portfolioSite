@@ -24,11 +24,10 @@
   <body>
     <div id="background--sunrise">
       <!-- headerbar -->
-      <nav class="header">
-        <span class="header__logoBar">
-          <img src="./img/logo-sun2.png" alt="" />
-          형진
-        </span>
+      <nav class="header" class="section">
+        <div class="header__logoBar">
+          <a href="#"><img src="./img/logo-sun2.png" alt="" />형진</a>
+        </div>
         <ul class="header__menu">
           <li class="header__menu__item">Home</li>
           <li class="header__menu__item">About</li>
@@ -51,7 +50,7 @@
       </section>
     </div>
     <!-- about -->
-    <section id="about">
+    <section id="about" class="section">
       <h1 class="about__title">About me</h1>
       <span class="about__description">
         프론트엔드 개발자를 목표로 공부하고 있는 초보 개발자.<br />
@@ -84,85 +83,87 @@
       </ul>
     </section>
     <!-- skiils -->
-    <section id="skills">
-      <h1 class="skills__title">Skills</h1>
-      <h2 class="skills__subtitle">Skills & Attributes</h2>
-      <h3 class="skills__description">
-        해당 언어에 대한 관심, 숙련도를 자가진단 하였습니다.
-      </h3>
-      <div class="skillBox">
-        <div class="skillBox__left">
-          <h3 class="skillBox__left__title">Skills</h3>
-          <div class="skillBox__graph">
-            <div>
-              <label for="Html">Html</label>
-              <span>90%</span>
+    <section id="skills" class="section">
+      <div class="section__container">
+        <h1 class="skills__title">Skills</h1>
+        <h2 class="skills__subtitle">Skills & Attributes</h2>
+        <h3 class="skills__description">
+          해당 언어에 대한 관심, 숙련도를 자가진단 하였습니다.
+        </h3>
+        <div class="skillBox">
+          <div class="skillBox__left">
+            <h3 class="skillBox__left__title">Skills</h3>
+            <div class="skillBox__graph">
+              <div>
+                <label for="Html">Html</label>
+                <span>90%</span>
+              </div>
+              <input
+                type="range"
+                name="Html"
+                min="0"
+                max="10"
+                step="1"
+                value="9"
+              />
+              <div>
+                <label for="Css">Css</label>
+                <span>50%</span>
+              </div>
+              <input
+                type="range"
+                name="Css"
+                value="5"
+                min="0"
+                max="10"
+                step="1"
+              />
+              <div>
+                <label for="JavaScript">JavaScript</label>
+                <span>30%</span>
+              </div>
+              <input
+                type="range"
+                name="JavaScript"
+                value="3"
+                min="0"
+                max="10"
+                step="1"
+              />
+              <div>
+                <label for="React">React</label>
+                <span>0%</span>
+              </div>
+              <input
+                type="range"
+                name="React"
+                value="0"
+                min="0"
+                max="10"
+                step="1"
+              />
+              <div>
+                <label for="nodeJs">nodeJs</label>
+                <span>20%</span>
+              </div>
+              <input
+                type="range"
+                name="nodeJs"
+                value="2"
+                min="0"
+                max="10"
+                step="1"
+              />
             </div>
-            <input
-              type="range"
-              name="Html"
-              min="0"
-              max="10"
-              step="1"
-              value="9"
-            />
-            <div>
-              <label for="Css">Css</label>
-              <span>50%</span>
-            </div>
-            <input
-              type="range"
-              name="Css"
-              value="5"
-              min="0"
-              max="10"
-              step="1"
-            />
-            <div>
-              <label for="JavaScript">JavaScript</label>
-              <span>30%</span>
-            </div>
-            <input
-              type="range"
-              name="JavaScript"
-              value="3"
-              min="0"
-              max="10"
-              step="1"
-            />
-            <div>
-              <label for="React">React</label>
-              <span>0%</span>
-            </div>
-            <input
-              type="range"
-              name="React"
-              value="0"
-              min="0"
-              max="10"
-              step="1"
-            />
-            <div>
-              <label for="nodeJs">nodeJs</label>
-              <span>20%</span>
-            </div>
-            <input
-              type="range"
-              name="nodeJs"
-              value="2"
-              min="0"
-              max="10"
-              step="1"
-            />
           </div>
-        </div>
-        <div class="skillBox__right">
-          <div class="skillBox__tools">
-            <span class="skillBox__tools__title"> Tools </span>
-            <span> Visual Studio </span>
-          </div>
-          <div class="skillBox__etc">
-            <span class="skillBox__etc__title"> Etc </span><span>Git</span>
+          <div class="skillBox__right">
+            <div class="skillBox__tools">
+              <span class="skillBox__tools__title"> Tools </span>
+              <span> Visual Studio </span>
+            </div>
+            <div class="skillBox__etc">
+              <span class="skillBox__etc__title"> Etc </span><span>Git</span>
+            </div>
           </div>
         </div>
       </div>
@@ -173,42 +174,97 @@
       <nav class="projects-nav">
         <ul>
           <li class="projects-nav__list">All</li>
-          <li class="projects-nav__list">Front-end</li>
-          <li class="projects-nav__list">Back-end</li>
-          <li class="projects-nav__list">Mobile</li>
+          <li class="projects-nav__list">Html + Css</li>
+          <li class="projects-nav__list">JavaScript</li>
+          <li class="projects-nav__list">React</li>
         </ul>
       </nav>
       <div class="projects__screenshots">
-        <div class="projects__screenshot">
+        <a
+          href="https://github.com/koreadinosaur/toDoList"
+          target="blank"
+          class="project"
+        >
+          <img src="./img/youtube-watch.png" alt="toDoList" />
+          <div class="project__description">
+            <h3>Youtube</h3>
+            <span>Javascript, nodeJs, mongoDb</span>
+          </div>
+        </a>
+        <a
+          href="https://github.com/koreadinosaur/kakao-clone21"
+          target="blank"
+          class="project"
+        >
+          <img src="./img/youtube-watch.png" alt="kakao-clone" />
+          <div class="project__description">
+            <h3>kakao-clone</h3>
+            <span>Html, Css</span>
+          </div>
+        </a>
+        <a
+          href="https://github.com/koreadinosaur/mini-shoppingmall"
+          target="blank"
+          class="project"
+        >
+          <img src="./img/youtube-watch.png" alt="mini-shoppingmall" />
+          <div class="project__description">
+            <h3>mini-shoppingmall</h3>
+            <span>Html, Css, JavaScript</span>
+          </div>
+        </a>
+        <a href="" target="blank" class="project">
           <img src="./img/youtube-watch.png" alt="" />
-        </div>
-        <div class="projects__screenshot">
+          <div class="project__description">
+            <h3>toDoList</h3>
+            <span>Html, Css, JavaScript</span>
+          </div>
+        </a>
+        <a href="" target="blank" class="project">
           <img src="./img/youtube-watch.png" alt="" />
-        </div>
-        <div class="projects__screenshot">
+          <div class="project__description">
+            <h3>Youtube</h3>
+            <span>Javascript,nodeJs,mongoDb</span>
+          </div>
+        </a>
+        <a href="" target="blank" class="project">
           <img src="./img/youtube-watch.png" alt="" />
-        </div>
-        <div class="projects__screenshot">
+          <div class="project__description">
+            <h3>Youtube</h3>
+            <span>Javascript,nodeJs,mongoDb</span>
+          </div>
+        </a>
+        <a href="" target="blank" class="project">
           <img src="./img/youtube-watch.png" alt="" />
-        </div>
-        <div class="projects__screenshot">
-          <img src="./img/youtube-watch.png" alt="" />
-        </div>
-        <div class="projects__screenshot">
-          <img src="./img/youtube-watch.png" alt="" />
-        </div>
-        <div class="projects__screenshot">
-          <img src="./img/youtube-watch.png" alt="" />
-        </div>
-        <div class="projects__screenshot">
-          <img src="./img/youtube-watch.png" alt="" />
-        </div>
+          <div class="project__description">
+            <h3>Youtube</h3>
+            <span>Javascript,nodeJs,mongoDb</span>
+          </div>
+        </a>
+        <a
+          href="https://github.com/koreadinosaur/wetube-reloaded"
+          target="blank"
+          class="project"
+        >
+          <img src="./img/youtube-watch.png" alt="Youtube" />
+          <div class="project__description">
+            <h3>Youtube</h3>
+            <span>Javascript,nodeJs,mongoDb</span>
+          </div>
+        </a>
       </div>
     </section>
     <!-- testimonials -->
     <section id="Testimonials"></section>
     <!-- contact -->
-    <section id="contact"></section>
-    <main></main>
+    <section id="contact">
+      <h1>Contact</h1>
+      <span class="contact-email">이메일 : khj7741@gmail.com </span>
+      <a href="https://github.com/koreadinosaur"
+        >깃허브 : https://github.com/koreadinosaur</a
+      >
+      <a href="https://secondlifestudy31.blogspot.com/"> 구글 블로그</a>
+      <footer class="contact__footer">2022 HJ's portfolio</footer>
+    </section>
   </body>
 </html>
