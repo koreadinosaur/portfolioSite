@@ -1,8 +1,8 @@
 const navBar = document.querySelector(".header");
-
-console.log(navBar.clientHeight);
-console.log(window.screenY);
-
+const about = document.querySelector("#about");
+const projects = document.querySelector("#myProjects");
+const contact = document.querySelector(".profile__contact");
+// fix navBar
 function fixNav() {
   if (window.scrollY > navBar.clientHeight - 16) {
     navBar.classList.add(`fixed`);
@@ -12,3 +12,20 @@ function fixNav() {
 }
 
 window.addEventListener("scroll", fixNav);
+
+// scroll to the desired element
+
+function onclick(event) {
+  const id = event.target.dataset.target;
+  const targetElement = document.querySelector(`${id}`);
+  console.log(targetElement);
+  targetElement.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest",
+  });
+}
+
+navBar.addEventListener("click", onclick);
+
+contact.addEventListener("click", onclick);

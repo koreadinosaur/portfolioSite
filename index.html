@@ -30,19 +30,26 @@
           <a href="#"><img src="./img/logo-sun2.png" alt="" />HJ</a>
         </div>
         <ul class="header__menu">
-          <li class="header__menu__item Home">Home</li>
-          <li class="header__menu__item">About</li>
-          <li class="header__menu__item">Skills</li>
-          <li class="header__menu__item">My work</li>
-          <li class="header__menu__item">Testimonial</li>
-          <li class="header__menu__item">Contact</li>
+          <li
+            class="header__menu__item Home"
+            data-target="#background--sunrise"
+          >
+            Home
+          </li>
+          <li class="header__menu__item" data-target="#about">About</li>
+          <li class="header__menu__item" data-target="#skills">Skills</li>
+          <li class="header__menu__item" data-target="#myProjects">My work</li>
+          <!-- <li class="header__menu__item" data-target="#Testimonial">
+            Testimonial
+          </li> -->
+          <li class="header__menu__item" data-target="#contact">Contact</li>
         </ul>
         <div class="header__toggle">
           <i class="fa-solid fa-bars"></i>
         </div>
       </nav>
       <!-- profile -->
-      <section id="profile">
+      <section id="profile" class="transparent">
         <div class="profile__avatar">
           <img src="./img/avartar2.jpg" alt="avartar" />
         </div>
@@ -50,7 +57,9 @@
           안녕하세요<br />
           김형진의 포트폴리오 사이트에 오신걸 환영합니다
         </span>
-        <button class="profile__contact">contact me</button>
+        <button class="profile__contact" data-target="#contact">
+          contact me
+        </button>
       </section>
     </div>
     <!-- about -->
