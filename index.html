@@ -187,30 +187,36 @@
       <h1 class="projects__title">My Projects</h1>
       <nav class="projects-nav">
         <ul>
-          <li class="projects-nav__list">All</li>
-          <li class="projects-nav__list">Html + Css</li>
-          <li class="projects-nav__list">JavaScript</li>
-          <li class="projects-nav__list">React</li>
+          <li class="projects-nav__list projects__all">All</li>
+          <li class="projects-nav__list filterLi" data-language="html">
+            Html + Css
+          </li>
+          <li class="projects-nav__list filterLi" data-language="javascript">
+            JavaScript
+          </li>
+          <li class="projects-nav__list filterLi" data-language="react">
+            React
+          </li>
         </ul>
       </nav>
       <div class="projects__screenshots">
-        <a
-          href="https://github.com/koreadinosaur/toDoList"
+        <!-- <a
+          href="https://github.com/koreadinosaur/wetube-reloaded"
           target="blank"
           class="project"
         >
-          <img src="./img/youtube-watch.png" alt="toDoList" />
+          <img src="./img/myprojects/youtube-watch.png" alt="youtube-clone" />
           <div class="project__description">
             <h3>Youtube</h3>
             <span>Javascript, nodeJs, mongoDb</span>
           </div>
-        </a>
-        <a
+        </a> -->
+        <!-- <a
           href="https://github.com/koreadinosaur/kakao-clone21"
           target="blank"
           class="project"
         >
-          <img src="./img/youtube-watch.png" alt="kakao-clone" />
+          <img src="./img/myprojects/kakaotalk.png" alt="kakaotalk-clone" />
           <div class="project__description">
             <h3>kakao-clone</h3>
             <span>Html, Css</span>
@@ -221,37 +227,40 @@
           target="blank"
           class="project"
         >
-          <img src="./img/youtube-watch.png" alt="mini-shoppingmall" />
+          <img
+            src="./img/myprojects/minishoppingmall.png"
+            alt="mini-shoppingmall"
+          />
           <div class="project__description">
             <h3>mini-shoppingmall</h3>
             <span>Html, Css, JavaScript</span>
           </div>
         </a>
         <a href="" target="blank" class="project">
-          <img src="./img/youtube-watch.png" alt="" />
+          <img src="./img/myprojects/toDoList-min.png" alt="todolist" />
           <div class="project__description">
             <h3>toDoList</h3>
             <span>Html, Css, JavaScript</span>
           </div>
         </a>
         <a href="" target="blank" class="project">
-          <img src="./img/youtube-watch.png" alt="" />
+          <img src="" alt="" />
           <div class="project__description">
-            <h3>Youtube</h3>
+            <h3>project5</h3>
             <span>Javascript,nodeJs,mongoDb</span>
           </div>
         </a>
         <a href="" target="blank" class="project">
-          <img src="./img/youtube-watch.png" alt="" />
+          <img src="" alt="" />
           <div class="project__description">
-            <h3>Youtube</h3>
+            <h3>project6</h3>
             <span>Javascript,nodeJs,mongoDb</span>
           </div>
         </a>
         <a href="" target="blank" class="project">
-          <img src="./img/youtube-watch.png" alt="" />
+          <img src="" alt="" />
           <div class="project__description">
-            <h3>Youtube</h3>
+            <h3>project7</h3>
             <span>Javascript,nodeJs,mongoDb</span>
           </div>
         </a>
@@ -260,12 +269,12 @@
           target="blank"
           class="project"
         >
-          <img src="./img/youtube-watch.png" alt="Youtube" />
+          <img src="" alt="" />
           <div class="project__description">
-            <h3>Youtube</h3>
+            <h3>project8</h3>
             <span>Javascript,nodeJs,mongoDb</span>
           </div>
-        </a>
+        </a> -->
       </div>
     </section>
     <!-- testimonials -->
@@ -279,6 +288,9 @@
       >
       <a href="https://secondlifestudy31.blogspot.com/"> 구글 블로그</a>
       <footer class="contact__footer">2022 HJ's portfolio</footer>
+    </section>
+    <section id="arrow">
+      <i class="fa-solid fa-circle-arrow-up fa-5x" data-target="#profile"></i>
     </section>
   </body>
 </html>

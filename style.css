@@ -102,10 +102,13 @@ body {
 }
 /* header */
 .header {
+  position: fixed;
+  width: 100%;
   color: var(--color-white);
   display: flex;
   justify-content: space-between;
   padding: 16px;
+  z-index: 1;
 }
 .header__logoBar {
   position: relative;
@@ -122,12 +125,14 @@ body {
   color: var(--color-white);
   display: flex;
   align-items: center;
+  -webkit-transition: all var(--animation-duration) ease-in-out;
+  transition: all var(--animation-duration) ease-in-out;
 }
 .header__logoBar a:hover {
   color: var(--color-pink);
+  transform: scale(1.1);
 }
 
-.projects-nav ul,
 .header__menu {
   position: relative;
   list-style: none;
@@ -135,12 +140,17 @@ body {
   align-items: center;
   margin: 0;
 }
+
 .header__menu__item:hover {
   cursor: pointer;
   color: var(--color-pink);
+  transform: scale(1.1);
 }
 .header__menu__item {
+  z-index: 2;
   padding: 0 5px;
+  -webkit-transition: all var(--animation-duration) ease-in-out;
+  transition: all var(--animation-duration) ease-in-out;
 }
 .Home {
   border: 1px solid;
@@ -155,13 +165,12 @@ body {
   font-size: 24px;
 }
 /* fix nav bar */
-.fixed {
-  position: fixed;
-  width: 100%;
+.header.fixed {
+  z-index: 1;
+  -webkit-transition: all var(--animation-duration) ease-in-out;
+  transition: all var(--animation-duration) ease-in-out;
 }
-.fixed a {
-}
-.fixed::before {
+.header.fixed::before {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -173,6 +182,7 @@ body {
   height: 100%;
   content: "";
   opacity: 0.5;
+  z-index: -1;
 }
 
 /* profile */
@@ -182,7 +192,7 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding-top: var(--padding-top);
+  padding-top: 80px;
 }
 #profile span {
   padding-top: calc(var(--padding-top) * 0.5);
@@ -347,7 +357,11 @@ input[type="range"]::-webkit-slider-thumb {
   flex-direction: column;
   align-items: center;
 }
-
+.projects-nav ul {
+  position: relative;
+  display: flex;
+  list-style: none;
+}
 .projects-nav__list {
   width: 150px;
   text-align: center;
@@ -423,6 +437,20 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: var(--margin-top);
   font-weight: lighter;
   color: var(--color-dark-white);
+}
+
+/* arrow */
+#arrow {
+  color: var(--color-dark-white);
+}
+.arrowToHome {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.arrowToHome i:hover {
+  cursor: pointer;
+  color: var(--color-grey);
 }
 
 /* For below 768px screen width */
