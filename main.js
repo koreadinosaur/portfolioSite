@@ -1,6 +1,5 @@
 const navBar = document.querySelector(".header");
 const about = document.querySelector("#about");
-const projects = document.querySelector("#myProjects");
 const contact = document.querySelector(".profile__contact");
 const home = document.querySelector("#background--sunrise");
 const profile = document.querySelector("#profile");
@@ -45,49 +44,62 @@ function transparent() {
 window.addEventListener("scroll", transparent);
 
 // filtering
-function loadData() {
-  return fetch(`data/projectdata.json`) //데이터 받아옴
-    .then((response) => response.json()) //받아온 데이터 json으로 변환
-    .then((json) => json.projects); //json 안에 있는 projects를 return
-}
-function displayProjects(projects) {
-  const projectContainer = document.querySelector(".projects__screenshots");
-  projectContainer.innerHTML = projects.map((project) => jsonToString(project));
-}
-function jsonToString(project) {
-  return `<a href="${project.href}" target="blank" class="project">
-  <img src="${project.src}" alt="${project.alt}" />
-  <div class="project__description">
-    <h3>${project.title}</h3>
-    <span>${project.description}</span>
-  </div>
-</a>`;
-}
-function onclickevent(projects) {
-  const navProject = document.querySelector(".projects-nav");
-  const all = document.querySelector(".projects__all");
-  console.log(navProject);
-  all.addEventListener("click", () => displayProjects(projects));
-  navProject.addEventListener("click", (event) =>
-    filterLanguage(event, projects)
-  );
-}
 
-function filterLanguage(event, projects) {
+// function loadData() {
+//   return fetch(`data/projectdata.json`) //데이터 받아옴
+//     .then((response) => response.json()) //받아온 데이터 json으로 변환
+//     .then((json) => json.projects); //json 안에 있는 projects를 return
+// }
+// function displayProjects(projects) {
+//   const projectContainer = document.querySelector(".projects__screenshots");
+//   projectContainer.innerHTML = projects.map((project) => jsonToString(project));
+// }
+// function jsonToString(project) {
+//   return `<a href="${project.href}" target="blank" class="project">
+//   <img src="${project.src}" alt="${project.alt}" />
+//   <div class="project__description">
+//     <h3>${project.title}</h3>
+//     <span>${project.description}</span>
+//   </div>
+// </a>`;
+// }
+const navProject = document.querySelector(".projects-nav");
+const projectContainer = document.querySelectorAll(".project");
+
+navProject.addEventListener("click", (event) => filterLanguage(event));
+
+function filterLanguage(event) {
   const Language = event.target.dataset.language;
+  console.log(Language);
   if (Language == null) {
-    return;
+    return projectContainer.forEach((project) => {
+      project.classList.remove("invisible");
+      project.classList.add("visible");
+      setTimeout(() => {
+        project.classList.remove("visible");
+      }, 301);
+    });
   }
-  const filteredProjects = projects.filter((project) => {
-    return Language === project.language;
+
+  projectContainer.forEach((project) => {
+    if (Language === project.dataset.language) {
+      project.classList.add("visible");
+      project.classList.remove("invisible");
+      setTimeout(() => {
+        project.classList.remove("visible");
+      }, 301);
+    } else {
+      project.classList.add("invisible");
+      project.classList.remove("visible");
+    }
   });
-  displayProjects(filteredProjects);
+  // updateVisible(Language, projects);
 }
 
-loadData()
-  .then((projects) => {
-    //functions
-    displayProjects(projects);
-    onclickevent(projects);
-  })
-  .catch(console.log);
+// loadData()
+//   .then((projects) => {
+//     //functions
+//     displayProjects(projects);
+//     onclickevent(projects);
+//   })
+//   .catch(console.log);
