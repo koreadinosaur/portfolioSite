@@ -1,17 +1,17 @@
-const navBar = document.querySelector(".header");
+const headerBar = document.querySelector(".header");
 const about = document.querySelector("#about");
 const contact = document.querySelector(".profile__contact");
 const home = document.querySelector("#background--sunrise");
 const profile = document.querySelector("#profile");
-// fix navBar
+// fix headerBar
 const arrow = document.querySelector("#arrow");
 
 function fixNav() {
-  if (window.scrollY > navBar.clientHeight) {
-    navBar.classList.add(`fixed`);
+  if (window.scrollY > headerBar.clientHeight) {
+    headerBar.classList.add(`fixed`);
     arrow.classList.add(`arrowToHome`);
   } else {
-    navBar.classList.remove(`fixed`);
+    headerBar.classList.remove(`fixed`);
     arrow.classList.remove(`arrowToHome`);
   }
 }
@@ -19,6 +19,7 @@ function fixNav() {
 window.addEventListener("scroll", fixNav);
 window.addEventListener("scroll", fixNav);
 // scroll to the desired element
+const navBar = document.querySelector(".header__menu");
 
 function onclick(event) {
   const id = event.target.dataset.target;
@@ -103,11 +104,29 @@ function filterLanguage(event, navProject) {
     } else {
       project.classList.add("invisible");
       project.classList.remove("visible");
-      setTimeout(() => {}, 290);
     }
   });
-  // updateVisible(Language, projects);
 }
+// responsive web toggle
+const headerToggle = document.querySelector(".header__toggle");
+const navitems = document.querySelectorAll(".header__menu__item");
+
+function clickToggle() {
+  if (navBar.classList.contains("animation-in")) {
+    navBar.classList.remove("animation-in");
+  } else {
+    navBar.classList.add("animation-in");
+  }
+  navitems.forEach((navitem) => {
+    if (navitem.classList.contains("unfold")) {
+      setTimeout(() => navitem.classList.remove("unfold"), 200);
+    } else {
+      navitem.classList.add("unfold");
+    }
+  });
+}
+
+headerToggle.addEventListener("click", clickToggle);
 
 // loadData()
 //   .then((projects) => {

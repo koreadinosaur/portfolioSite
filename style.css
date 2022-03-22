@@ -147,6 +147,7 @@ body {
   opacity: 0.7;
   transform: scale(1.1);
   border-radius: 10%;
+  border: none;
 }
 .header__menu__item {
   z-index: 2;
@@ -473,17 +474,49 @@ input[type="range"]::-webkit-slider-thumb {
 @media screen and (max-width: 768px) {
   .header__toggle {
     display: block;
+    transition: all var(--animation-duration);
+  }
+  .header__toggle:hover {
+    cursor: pointer;
+    color: var(--color-dark-pink);
+    transform: scale(1.1);
   }
   .header {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
+    transition: all var(--animation-duration) ease;
   }
   .header__menu {
-    display: flex;
     flex-direction: column;
     padding-left: 0;
+    transition: all var(--animation-duration) ease;
+    opacity: 0;
+  }
+  .header__menu.animation-in {
+    opacity: 1;
+  }
+  .header__menu__item {
     display: none;
+  }
+  .header__menu__item.unfold {
+    display: flex;
+  }
+
+  .header__menu,
+  .Home {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: auto;
+    padding: 5px;
+  }
+  .header__menu__item {
+    border-bottom: solid 1px var(--color-white);
+  }
+  #profile {
+    padding-top: 24px;
   }
   .about__stacks {
     flex-direction: column;
