@@ -63,14 +63,25 @@ window.addEventListener("scroll", transparent);
 //   </div>
 // </a>`;
 // }
-const navProject = document.querySelector(".projects-nav");
+const navProjects = document.querySelectorAll(".projects-nav__list");
 const projectContainer = document.querySelectorAll(".project");
 
-navProject.addEventListener("click", (event) => filterLanguage(event));
+navProjects.forEach((navProject) =>
+  navProject.addEventListener("click", (event) =>
+    filterLanguage(event, navProject)
+  )
+);
 
-function filterLanguage(event) {
+function filterLanguage(event, navProject) {
   const Language = event.target.dataset.language;
-  console.log(Language);
+  const active = document.querySelector(".active");
+  if (active != null) {
+    active.classList.remove("active");
+  }
+  navProject.classList.add("active");
+
+  // event.currentTarget.style.backgroundColor = "red";
+
   if (Language == null) {
     return projectContainer.forEach((project) => {
       project.classList.remove("invisible");
@@ -87,10 +98,12 @@ function filterLanguage(event) {
       project.classList.remove("invisible");
       setTimeout(() => {
         project.classList.remove("visible");
+        //visible을 삭제해줘야 다시 필터링 할 때 fade-in이 됨
       }, 301);
     } else {
       project.classList.add("invisible");
       project.classList.remove("visible");
+      setTimeout(() => {}, 290);
     }
   });
   // updateVisible(Language, projects);
