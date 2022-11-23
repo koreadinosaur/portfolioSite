@@ -97,7 +97,7 @@ body {
 }
 /* background */
 #background--sunrise {
-  background: url(./img/sunrise-background2.jpg) center/cover no-repeat;
+  background: url(./img/노을.jpg) center/cover no-repeat;
   background-size: 100% 100%;
 }
 /* header */
@@ -205,12 +205,20 @@ body {
   font-size: var(--font-medium);
   font-weight: 400;
 }
-
-.profile__avatar img {
+.profile__avatar {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+.profile__avatar img {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .profile__contact {
