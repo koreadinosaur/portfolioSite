@@ -5,6 +5,10 @@ const home = document.querySelector("#background--sunrise");
 const profile = document.querySelector("#profile");
 // fix headerBar
 const arrow = document.querySelector("#arrow");
+import "./img/노을.jpg";
+import "./img/프로필.jpg";
+import "./img/sun-icon.png";
+require("./style.css");
 
 function fixNav() {
   if (window.scrollY > headerBar.clientHeight) {
